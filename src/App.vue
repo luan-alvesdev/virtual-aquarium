@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import AquarioFundo from './components/AquarioFundo/AquarioFundo.vue'
+import AquarioFundo from './components/aquario-fundo/AquarioFundo.vue'
+import MenuLateral from './components/menu-lateral/MenuLateral.vue'
 </script>
 
 <template>
   <main id="CorFundo">
     <section class="containerFundo">
       <div id="formulario">
-        <h1>Formulario</h1>
+        <MenuLateral />
       </div>
       <div id="AquarioFundo">
         <AquarioFundo />
