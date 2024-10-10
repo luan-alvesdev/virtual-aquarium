@@ -1,16 +1,32 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AquarioFundo from './components/AquarioFundo/AquarioFundo.vue'
+</script>
 
 <template>
-  <main></main>
+  <main id="CorFundo">
+    <section class="containerFundo">
+      <div id="formulario">
+        <h1>Formulario</h1>
+      </div>
+      <div id="AquarioFundo">
+        <AquarioFundo />
+      </div>
+    </section>
+  </main>
 </template>
 
 <style scoped>
-main {
+.containerFundo {
+  display: flex;
+}
+
+#formulario {
+  width: 20vw;
+}
+
+#AquarioFundo {
   height: 100vh;
-  width: 100vw;
-  background-image: url(./assets/imagens/background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 80vw;
+  background-color: lightblue;
 }
 </style>
