@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PeixeNadando from '../peixe-nadando/peixeNadando.vue'
+import { aquarioArray } from './AquarioFundo'
+</script>
 
 <template>
-  <main id="ImagemFundo"></main>
+  <main id="ImagemFundo">
+    <PeixeNadando v-for="(item, index) in aquarioArray" :key="index" :peixe="item"> </PeixeNadando>
+  </main>
 </template>
 
 <style scoped>
@@ -12,5 +17,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
