@@ -4,6 +4,7 @@ import SelecaoDePeixes from '../selecao-de-peixes/SelecaoDePeixes.vue'
 
 <template>
   <SelecaoDePeixes id="SelecaoDePeixes" />
+  
 </template>
 
 <style scoped>
