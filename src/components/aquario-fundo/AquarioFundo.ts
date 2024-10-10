@@ -1,8 +1,9 @@
 import { ref } from 'vue'
-import { Peixe } from '../peixe-nadando/peixeNadando'
+import { reactive } from 'vue'
+import { Peixe } from '../peixe-nadando/PeixeNadando'
 
 // Defina o tipo do array como um array de Peixe
-export const aquarioArray = ref<Peixe[]>([])
+export const aquarioArray = reactive<Peixe[]>([])
 
 export const imageWidth = ref(0)
 export const imageHeight = ref(0)
@@ -15,5 +16,6 @@ export const pegarDimensoes = () => {
 }
 
 export const adicionarPeixes = (nome: string, imagem: string) => {
-  aquarioArray.value.push(new Peixe(nome, imagem))
+  aquarioArray.push(new Peixe(nome, imagem))
+  aquarioArray[aquarioArray.length - 1].pedirComida()
 }

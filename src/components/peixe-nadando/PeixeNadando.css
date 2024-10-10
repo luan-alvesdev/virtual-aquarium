@@ -1,0 +1,52 @@
+figure {
+  width: 9.3em;
+}
+
+img {
+  width: 9.3em;
+}
+
+figcaption {
+  background-color: rgba(68, 68, 68, 0.8);
+  width: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.peixe {
+  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.tooltip-box {
+  position: absolute;
+  bottom: 100%; /* Posiciona acima da imagem */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza em relação ao ponto de referência */
+  background-color: white; /* Fundo branco */
+  color: black; /* Cor do texto */
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 5px; /* Espaçamento entre a caixa e a imagem */
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+.tooltip-box::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Posição da seta abaixo da caixa de aviso */
+  left: 50%; /* Centraliza a seta em relação à caixa */
+  transform: translateX(-50%); /* Centraliza a seta em relação ao ponto de referência */
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent; /* Seta branca */
+}

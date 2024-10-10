@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PeixeNadando from '../peixe-nadando/peixeNadando.vue'
+import PeixeNadando from '../peixe-nadando/PeixeNadando.vue'
 import { aquarioArray } from './AquarioFundo'
 </script>
 
