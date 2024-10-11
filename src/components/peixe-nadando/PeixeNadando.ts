@@ -47,6 +47,7 @@ export class Peixe {
         this.imagem = imagem_peixe_morto
         this.statusFome = 'hidden'
         setTimeout(() => {
+          // Invoca funcao passada via inicilizacao do constructor, fazendo a remocao do peixe morto
           this.removerPeixeMorto(this.id)
         }, 1000)
       }

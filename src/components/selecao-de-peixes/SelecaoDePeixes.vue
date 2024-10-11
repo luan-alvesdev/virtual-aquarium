@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
-import { indexDaImagem, selecionarPeixe, enviarForm, nomeDoPeixe, imagensArr } from './SelecaoDePeixes'
-
-
+import {
+  indexDaImagem,
+  selecionarPeixe,
+  enviarForm,
+  nomeDoPeixe,
+  imagensArr
+} from './SelecaoDePeixes'
 </script>
 
 <template>

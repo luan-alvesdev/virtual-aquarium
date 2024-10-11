@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <figure>
+  <figure v-if="peixe || false">
     <div class="tooltip-container">
       <img
         @click="peixe?.alimentarPeixe()"

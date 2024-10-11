@@ -25,6 +25,7 @@ export function pegarDimensoes(element: HTMLElement) {
 }
 
 export function removerPeixeMorto(id: number) {
-  const index = aquarioArray.findIndex((peixe) => peixe.id === id)
-  aquarioArray.splice(index, 1)
+  // remove o obj Peixe e troca por undefined, sem trocar a ordem dos elementos no array, liberando espaço
+  const index = aquarioArray.findIndex((peixe) => peixe?.id === id)
+  delete aquarioArray[index]
 }
