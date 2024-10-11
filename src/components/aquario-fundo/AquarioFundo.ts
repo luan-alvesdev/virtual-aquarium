@@ -2,6 +2,8 @@ import { ref } from 'vue'
 import { reactive } from 'vue'
 import { Peixe } from '../peixe-nadando/PeixeNadando'
 
+
+
 // Defina o tipo do array como um array de Peixe
 export const aquarioArray = reactive<Peixe[]>([])
 

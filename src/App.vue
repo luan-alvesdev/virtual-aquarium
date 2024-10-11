@@ -26,14 +26,7 @@ import MenuLateral from './components/menu-lateral/MenuLateral.vue'
 }
 
 #AquarioFundo {
-  background-image: url(./assets/imagens/background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
   height: 100vh;
   width: 80vw;
-  background-color: lightblue;
 }
 </style>

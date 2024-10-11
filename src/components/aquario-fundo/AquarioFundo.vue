@@ -2,7 +2,9 @@
 import PeixeNadando from '../peixe-nadando/PeixeNadando.vue'
 import { ref, onMounted } from 'vue'
 import { aquarioArray, pegarDimensoes } from './AquarioFundo'
+
 import './AquarioFundo.css'
+import bg from '@/assets/imagens/background.jpg'
 
 const minhaImagem = ref<HTMLElement | null>(null)
 
@@ -15,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main ref="minhaImagem" class="aquario-container">
+  <main ref="minhaImagem" class="aquario-container" :style="{ 'background-image': `url(${bg})`}">
     <div>
       <div>
         <PeixeNadando
