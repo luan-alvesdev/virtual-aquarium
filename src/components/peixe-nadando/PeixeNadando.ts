@@ -2,7 +2,7 @@ export class Peixe {
   nome = ''
   tamanho = ''
   imagem = ''
-  tempoParaAlimentar = 10
+  tempoParaAlimentar = 100
   barraDeFome = 0
   posicaoInicial = ''
   direcao = ''
@@ -32,14 +32,15 @@ export class Peixe {
       this.barraDeFome += 10
       this.contador++
 
-      if (this.contador >= 5) {
+      if (this.contador >= 7) {
         this.fome = true
       }
 
       // Após 10 segundos (10 iterações), parar o intervalo e executar o evento final
       if (this.contador > this.tempoParaAlimentar) {
         clearInterval(this.intervaloId)
-        alert('Morri')
+        this.imagem = 'src/assets/imagens/modelo_peixe_morto.webp'
+        this.fome = false
       }
     }, 1000)
   }

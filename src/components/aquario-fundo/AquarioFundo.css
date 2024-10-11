@@ -1,0 +1,30 @@
+/* .bubble-container {
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  background-image: url('path/to/your/background-image.jpg'); 
+  background-size: cover;
+  overflow: hidden; 
+} */
+
+.bubble {
+  position: absolute;
+  animation: float 4s ease-in-out infinite; /* Animação padrão */
+}
+
+.bubble img {
+  width: 50px; /* Ajuste o tamanho das bolhas */
+  height: auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Altura do movimento */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
