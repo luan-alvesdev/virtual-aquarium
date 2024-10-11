@@ -7,11 +7,17 @@ export const nomeDoPeixe = ref('')
 
 export const enviarForm = () => {
   const nome = nomeDoPeixe.value
+  if (indexDaImagem.value === null) {
+    console.log(indexDaImagem.value)
+    alert('Por favor, selecione um peixe.')
+    return
+  }
   const caminhoDaImagem = `src/assets/imagens/modelo_peixe_${indexDaImagem.value}.webp`
   adicionarPeixes(nome, caminhoDaImagem)
+  nomeDoPeixe.value = ''
+  indexDaImagem.value = null
 }
 
 export const selecionarPeixe = (index: number) => {
   indexDaImagem.value = index
-  console.log(indexDaImagem.value)
 }

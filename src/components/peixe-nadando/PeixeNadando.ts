@@ -2,17 +2,21 @@ export class Peixe {
   nome = ''
   tamanho = ''
   imagem = ''
-  tempoParaAlimentar = 100
+  tempoParaAlimentar = 10
   barraDeFome = 0
   posicaoInicial = ''
   direcao = ''
   fome = false
   contador = 0
   intervaloId: any
+  removerPeixeMorto: Function
+  id: number
 
-  constructor(nome: string, imagem: string) {
+  constructor(nome: string, imagem: string, removerPeixeMorto: Function, id: number) {
     this.nome = nome
     this.imagem = imagem
+    this.removerPeixeMorto = removerPeixeMorto
+    this.id = id
     this.direcaoInicial()
   }
 
@@ -41,6 +45,9 @@ export class Peixe {
         clearInterval(this.intervaloId)
         this.imagem = 'src/assets/imagens/modelo_peixe_morto.webp'
         this.fome = false
+        setTimeout(() => {
+          this.removerPeixeMorto(this.id)
+        }, 1000)
       }
     }, 1000)
   }
