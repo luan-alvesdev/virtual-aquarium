@@ -2,7 +2,7 @@ export class Peixe {
   nome = ''
   tamanho = ''
   imagem = ''
-  tempoParaAlimentar = 10
+  tempoParaAlimentar = 100
   barraDeFome = 0
   posicaoInicial = ''
   direcao = ''

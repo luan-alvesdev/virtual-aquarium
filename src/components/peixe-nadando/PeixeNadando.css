@@ -50,3 +50,7 @@ figcaption {
   border-style: solid;
   border-color: white transparent transparent transparent; /* Seta branca */
 }
+
+.p-progressbar-value {
+  background: violet;
+}

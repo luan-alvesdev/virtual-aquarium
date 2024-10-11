@@ -22,7 +22,7 @@ defineProps({
     </div>
     <figcaption>
       {{ peixe?.nome }}
-      <ProgressBar :showValue="false" :value="peixe?.barraDeFome"></ProgressBar>
+      <ProgressBar :showValue="false" :value="peixe?.barraDeFome" style="height: 3px"></ProgressBar>
     </figcaption>
   </figure>
 </template>

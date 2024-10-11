@@ -31,8 +31,18 @@ import { indexDaImagem, selecionarPeixe, enviarForm, nomeDoPeixe } from './Selec
       <form @submit.prevent="enviarForm">
         <div class="containerForm">
           <label for="">Name</label>
-          <InputText type="text" v-model="nomeDoPeixe" required />
-          <Button type="submit" label="Add Fish" severity="danger"></Button>
+          <InputText
+            type="text"
+            v-model="nomeDoPeixe"
+            required
+            style="background: white; color: black"
+          />
+          <Button
+            type="submit"
+            label="Add Fish"
+            severity="danger"
+            style="background: red; color: white; border: none"
+          ></Button>
         </div>
       </form>
     </section>
