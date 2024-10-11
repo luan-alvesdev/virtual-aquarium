@@ -54,3 +54,7 @@ figcaption {
 .p-progressbar-value {
   background: violet;
 }
+
+figcaption {
+  text-transform: uppercase; 
+}

@@ -18,7 +18,7 @@ defineProps({
         alt="Peixe"
         :style="{ transform: peixe?.direcao }"
       />
-      <div class="tooltip-box" v-if="peixe?.fome">Feed me !</div>
+      <div class="tooltip-box" v-if="peixe?.fome" style="font-weight:800">Feed me <strong style="color: red;">!</strong></div>
     </div>
     <figcaption>
       {{ peixe?.nome }}

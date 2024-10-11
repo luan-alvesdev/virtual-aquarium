@@ -8,7 +8,6 @@ export const nomeDoPeixe = ref('')
 export const enviarForm = () => {
   const nome = nomeDoPeixe.value
   if (indexDaImagem.value === null) {
-    console.log(indexDaImagem.value)
     alert('Por favor, selecione um peixe.')
     return
   }

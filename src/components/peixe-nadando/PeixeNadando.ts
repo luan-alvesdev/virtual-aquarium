@@ -2,12 +2,13 @@ export class Peixe {
   nome = ''
   tamanho = ''
   imagem = ''
-  tempoParaAlimentar = 100
+  tempoParaAlimentar = 1000
   barraDeFome = 0
   posicaoInicial = ''
   direcao = ''
   fome = false
   contador = 0
+  classeNome = ''
   intervaloId: any
   removerPeixeMorto: Function
   id: number
@@ -21,7 +22,13 @@ export class Peixe {
   }
 
   direcaoInicial() {
+    const modelos = ['peixe_modelo01', 'peixe_modelo02']
     const numeroAleatorio = Math.random() < 0.5 ? -1 : 1
+    if (numeroAleatorio === 1) {
+      this.classeNome = modelos[0]
+    } else {
+      this.classeNome = modelos[1]
+    }
     this.direcao = `scaleX(${numeroAleatorio})`
   }
 

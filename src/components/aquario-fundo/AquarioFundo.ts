@@ -14,7 +14,6 @@ export const medidas = {
 
 export const adicionarPeixes = (nome: string, imagem: string) => {
   const index = aquarioArray.length
-  console.log(index)
   aquarioArray.push(new Peixe(nome, imagem, removerPeixeMorto, index))
   aquarioArray[aquarioArray.length - 1].pedirComida()
 }
