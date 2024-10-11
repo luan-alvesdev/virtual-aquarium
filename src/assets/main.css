@@ -7,6 +7,10 @@
   width: 100vw;
 }
 
+ul li {
+  list-style: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;

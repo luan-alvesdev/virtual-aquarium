@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main ref="minhaImagem" class="aquario-container" :style="{ 'background-image': `url(${bg})`}">
+  <main ref="minhaImagem" class="aquario-container" :style="{ 'background-image': `url(${bg})` }">
     <div>
       <div>
         <PeixeNadando
