@@ -22,7 +22,7 @@ onMounted(() => {
           v-for="(item, index) in aquarioArray"
           :key="index"
           :peixe="item"
-          :class="item.classeNome"
+          :class="item.movimentacao > 0 ? 'peixe_posicao01' : 'peixe_posicao02'"
         >
         </PeixeNadando>
       </div>

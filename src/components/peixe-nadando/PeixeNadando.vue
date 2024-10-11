@@ -14,13 +14,21 @@ defineProps({
     <div class="tooltip-container">
       <img
         @click="peixe?.alimentarPeixe()"
+        :class="peixe?.movimentacao > 0 ? 'peixe_modelo01' : 'peixe_modelo02'"
         :src="peixe?.imagem"
         alt="Peixe"
         :style="{ transform: peixe?.direcao }"
       />
-      <div class="tooltip-box" v-if="peixe?.fome" style="font-weight:800">Feed me <strong style="color: red;">!</strong></div>
+      <div
+        :class="['tooltip-box', peixe?.movimentacao > 0 ? 'label_modelo01' : 'label_modelo02']"
+        :style="{ fontWeight: '800', visibility: peixe?.statusFome }"
+      >
+        Feed me <strong style="color: red">!</strong>
+      </div>
     </div>
-    <figcaption>
+    <figcaption
+      :class="['peixe-titulo', peixe?.movimentacao > 0 ? 'label_modelo01' : 'label_modelo02']"
+    >
       {{ peixe?.nome }}
       <ProgressBar :showValue="false" :value="peixe?.barraDeFome" style="height: 3px"></ProgressBar>
     </figcaption>

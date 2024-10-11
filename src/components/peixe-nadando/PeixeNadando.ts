@@ -1,14 +1,12 @@
 export class Peixe {
   nome = ''
-  tamanho = ''
   imagem = ''
-  tempoParaAlimentar = 1000
+  tempoParaAlimentar = 10
   barraDeFome = 0
-  posicaoInicial = ''
   direcao = ''
-  fome = false
+  statusFome = 'hidden'
   contador = 0
-  classeNome = ''
+  movimentacao = 0
   intervaloId: any
   removerPeixeMorto: Function
   id: number
@@ -22,20 +20,15 @@ export class Peixe {
   }
 
   direcaoInicial() {
-    const modelos = ['peixe_modelo01', 'peixe_modelo02']
     const numeroAleatorio = Math.random() < 0.5 ? -1 : 1
-    if (numeroAleatorio === 1) {
-      this.classeNome = modelos[0]
-    } else {
-      this.classeNome = modelos[1]
-    }
+    this.movimentacao = numeroAleatorio
     this.direcao = `scaleX(${numeroAleatorio})`
   }
 
   alimentarPeixe() {
     this.barraDeFome = 0
     this.contador = 0
-    this.fome = false
+    this.statusFome = 'hidden'
   }
 
   pedirComida() {
@@ -44,14 +37,14 @@ export class Peixe {
       this.contador++
 
       if (this.contador >= 7) {
-        this.fome = true
+        this.statusFome = 'visible'
       }
 
       // Após 10 segundos (10 iterações), parar o intervalo e executar o evento final
       if (this.contador > this.tempoParaAlimentar) {
         clearInterval(this.intervaloId)
         this.imagem = 'src/assets/imagens/modelo_peixe_morto.webp'
-        this.fome = false
+        this.statusFome = 'hidden'
         setTimeout(() => {
           this.removerPeixeMorto(this.id)
         }, 1000)

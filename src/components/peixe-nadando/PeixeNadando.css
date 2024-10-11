@@ -56,5 +56,235 @@ figcaption {
 }
 
 figcaption {
-  text-transform: uppercase; 
+  text-transform: uppercase;
+}
+
+.peixe_modelo01 {
+  animation: peixe_move01 40s cubic-bezier(0.9, 1, 0.3, 0.75) 0s infinite normal;
+}
+
+.peixe_modelo02 {
+  animation: peixe_move02 25s cubic-bezier(0.7, 1, 0.3, 0.5) 0s infinite normal;
+}
+
+.label_modelo01 {
+  animation: label_move01 40s cubic-bezier(0.9, 1, 0.3, 0.75) 0s infinite normal;
+}
+
+.label_modelo02 {
+  animation: label_move02 25s cubic-bezier(0.7, 1, 0.3, 0.5) 0s infinite normal;
+}
+
+/* MOVIMENTACOES PEIXES */
+@keyframes peixe_move01 {
+  0% {
+    transform: translate(0vw); /* Começa na posição 0vw */
+    -webkit-transform: translate(0vw);
+  }
+  10% {
+    transform: translate(14vw, -125px); /* Proporção ajustada para 70vw no total */
+    -webkit-transform: translate(14vw, -125px);
+  }
+  20% {
+    transform: translate(28vw, -45px) rotateZ(22deg); /* Proporção ajustada */
+    -webkit-transform: translate(28vw, -45px) rotateZ(22deg);
+  }
+  30% {
+    transform: translate(42vw, -250px); /* Proporção ajustada */
+    -webkit-transform: translate(42vw, -250px);
+  }
+  40% {
+    transform: translate(56vw, -80px) rotateZ(22deg); /* Proporção ajustada */
+    -webkit-transform: translate(56vw, -80px) rotateZ(22deg);
+  }
+  50% {
+    transform: translate(70vw, -145px); /* Vai até 70vw */
+    -webkit-transform: translate(70vw, -145px);
+  }
+  51% {
+    transform: translate(70vw, -145px) rotateY(180deg); /* Vira em 70vw */
+    -webkit-transform: translate(70vw, -145px) rotateY(180deg);
+  }
+  60% {
+    transform: translate(56vw, -80px) rotateY(180deg) rotateZ(22deg); /* Começa a voltar */
+    -webkit-transform: translate(56vw, -80px) rotateY(180deg) rotateZ(22deg);
+  }
+  70% {
+    transform: translate(42vw, -250px) rotateY(180deg); /* Continua voltando */
+    -webkit-transform: translate(42vw, -250px) rotateY(180deg);
+  }
+  80% {
+    transform: translate(28vw, -45px) rotateY(180deg) rotateZ(22deg); /* Aproxima-se da origem */
+    -webkit-transform: translate(28vw, -45px) rotateY(180deg) rotateZ(22deg);
+  }
+  90% {
+    transform: translate(14vw, -125px) rotateY(180deg); /* Quase de volta à origem */
+    -webkit-transform: translate(14vw, -125px) rotateY(180deg);
+  }
+  99% {
+    transform: translate(0vw) rotateY(180deg) rotateZ(22deg); /* Volta ao início */
+    -webkit-transform: translate(0vw) rotateY(180deg) rotateZ(22deg);
+  }
+  100% {
+    transform: translate(0vw); /* Posição inicial */
+    -webkit-transform: translate(0vw);
+  }
+}
+
+@keyframes peixe_move02 {
+  0% {
+    transform: translate(0vw) rotateY(180deg); /* Começa invertido horizontalmente */
+    -webkit-transform: translate(0vw) rotateY(180deg);
+  }
+  10% {
+    transform: translate(-14vw, -125px) rotateY(180deg); /* Move invertido para a esquerda */
+    -webkit-transform: translate(-14vw, -125px) rotateY(180deg);
+  }
+  20% {
+    transform: translate(-28vw, -45px) rotateY(180deg) rotateZ(22deg); /* Continua movendo para a esquerda */
+    -webkit-transform: translate(-28vw, -45px) rotateY(180deg) rotateZ(22deg);
+  }
+  30% {
+    transform: translate(-42vw, -250px) rotateY(180deg); /* Continua movendo mais para a esquerda */
+    -webkit-transform: translate(-42vw, -250px) rotateY(180deg);
+  }
+  40% {
+    transform: translate(-56vw, -80px) rotateY(180deg) rotateZ(22deg); /* Aproxima-se do ponto de retorno */
+    -webkit-transform: translate(-56vw, -80px) rotateY(180deg) rotateZ(22deg);
+  }
+  50% {
+    transform: translate(-70vw, -145px) rotateY(180deg); /* Vai até -70vw */
+    -webkit-transform: translate(-70vw, -145px) rotateY(180deg);
+  }
+  51% {
+    transform: translate(-70vw, -145px); /* Vira horizontalmente ao alcançar -70vw */
+    -webkit-transform: translate(-70vw, -145px);
+  }
+  60% {
+    transform: translate(-56vw, -80px) rotateZ(22deg); /* Começa a voltar */
+    -webkit-transform: translate(-56vw, -80px) rotateZ(22deg);
+  }
+  70% {
+    transform: translate(-42vw, -250px); /* Continua voltando */
+    -webkit-transform: translate(-42vw, -250px);
+  }
+  80% {
+    transform: translate(-28vw, -45px) rotateZ(22deg); /* Aproxima-se da origem */
+    -webkit-transform: translate(-28vw, -45px) rotateZ(22deg);
+  }
+  90% {
+    transform: translate(-14vw, -125px); /* Quase de volta à origem */
+    -webkit-transform: translate(-14vw, -125px);
+  }
+  99% {
+    transform: translate(0vw) rotateZ(22deg); /* Volta ao início */
+    -webkit-transform: translate(0vw) rotateZ(22deg);
+  }
+  100% {
+    transform: translate(0vw) rotateY(180deg); /* Mantém-se invertido no final */
+    -webkit-transform: translate(0vw) rotateY(180deg);
+  }
+}
+
+/* MOVIMENTACOES LABELS */
+@keyframes label_move01 {
+  0% {
+    transform: translate(0vw); /* Começa na posição 0vw */
+    -webkit-transform: translate(0vw);
+  }
+  10% {
+    transform: translate(14vw, -125px); /* Proporção ajustada para 70vw no total */
+    -webkit-transform: translate(14vw, -125px);
+  }
+  20% {
+    transform: translate(28vw, -45px); /* Proporção ajustada */
+    -webkit-transform: translate(28vw, -45px);
+  }
+  30% {
+    transform: translate(42vw, -250px); /* Proporção ajustada */
+    -webkit-transform: translate(42vw, -250px);
+  }
+  40% {
+    transform: translate(56vw, -80px); /* Proporção ajustada */
+    -webkit-transform: translate(56vw, -80px);
+  }
+  50% {
+    transform: translate(70vw, -145px); /* Vai até 70vw */
+    -webkit-transform: translate(70vw, -145px);
+  }
+  51% {
+    transform: translate(70vw, -145px); /* Vira em 70vw */
+    -webkit-transform: translate(70vw, -145px);
+  }
+  60% {
+    transform: translate(56vw, -80px); /* Começa a voltar */
+    -webkit-transform: translate(56vw, -80px);
+  }
+  70% {
+    transform: translate(42vw, -250px); /* Continua voltando */
+    -webkit-transform: translate(42vw, -250px);
+  }
+  80% {
+    transform: translate(28vw, -45px); /* Aproxima-se da origem */
+    -webkit-transform: translate(28vw, -45px);
+  }
+  90% {
+    transform: translate(14vw, -125px); /* Quase de volta à origem */
+    -webkit-transform: translate(14vw, -125px);
+  }
+  99% {
+    transform: translate(0vw); /* Volta ao início */
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    transform: translate(0vw); /* Posição inicial */
+    -webkit-transform: translate(0vw);
+  }
+}
+
+@keyframes label_move02 {
+  0% {
+    transform: translate(0vw); /* Começa à direita em 0vw */
+    -webkit-transform: translate(0vw);
+  }
+  10% {
+    transform: translate(-14vw, -125px); /* Move para a esquerda */
+    -webkit-transform: translate(-14vw, -125px);
+  }
+  20% {
+    transform: translate(-28vw, -45px); /* Continua movendo para a esquerda */
+    -webkit-transform: translate(-28vw, -45px);
+  }
+  30% {
+    transform: translate(-42vw, -250px); /* Continua movendo mais para a esquerda */
+    -webkit-transform: translate(-42vw, -250px);
+  }
+  40% {
+    transform: translate(-56vw, -80px); /* Aproxima-se do ponto de retorno */
+    -webkit-transform: translate(-56vw, -80px);
+  }
+  50% {
+    transform: translate(-70vw, -145px); /* Chega a -70vw */
+    -webkit-transform: translate(-70vw, -145px);
+  }
+  60% {
+    transform: translate(-56vw, -80px); /* Começa a retornar para a direita */
+    -webkit-transform: translate(-56vw, -80px);
+  }
+  70% {
+    transform: translate(-42vw, -250px); /* Continua voltando */
+    -webkit-transform: translate(-42vw, -250px);
+  }
+  80% {
+    transform: translate(-28vw, -45px); /* Aproxima-se do ponto inicial */
+    -webkit-transform: translate(-28vw, -45px);
+  }
+  90% {
+    transform: translate(-14vw, -125px); /* Quase de volta à origem */
+    -webkit-transform: translate(-14vw, -125px);
+  }
+  100% {
+    transform: translate(0vw); /* Volta ao ponto inicial */
+    -webkit-transform: translate(0vw);
+  }
 }
