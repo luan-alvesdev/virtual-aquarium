@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
-import { indexDaImagem, selecionarPeixe, enviarForm, nomeDoPeixe } from './SelecaoDePeixes'
+import { indexDaImagem, selecionarPeixe, enviarForm, nomeDoPeixe, imagensArr } from './SelecaoDePeixes'
+
+
 </script>
 
 <template>
@@ -10,19 +12,19 @@ import { indexDaImagem, selecionarPeixe, enviarForm, nomeDoPeixe } from './Selec
       <h1>Fish Types</h1>
       <ul>
         <li :class="['elemento', { clicado: indexDaImagem === 0 }]" @click="selecionarPeixe(0)">
-          <img class="ImagemPeixe" src="../../assets/imagens/modelo_peixe_0.webp" alt="Peixe 1" />
+          <img class="ImagemPeixe" :src="imagensArr[0]" alt="Peixe 1" />
         </li>
         <li :class="['elemento', { clicado: indexDaImagem === 1 }]" @click="selecionarPeixe(1)">
-          <img class="ImagemPeixe" src="../../assets/imagens/modelo_peixe_1.webp" alt="" />
+          <img class="ImagemPeixe" :src="imagensArr[1]" alt="" />
         </li>
         <li :class="['elemento', { clicado: indexDaImagem === 2 }]" @click="selecionarPeixe(2)">
-          <img class="ImagemPeixe" src="../../assets/imagens/modelo_peixe_2.webp" alt="" />
+          <img class="ImagemPeixe" :src="imagensArr[2]" alt="" />
         </li>
         <li :class="['elemento', { clicado: indexDaImagem === 3 }]" @click="selecionarPeixe(3)">
-          <img class="ImagemPeixe" src="../../assets/imagens/modelo_peixe_3.webp" alt="" />
+          <img class="ImagemPeixe" :src="imagensArr[3]" alt="" />
         </li>
         <li :class="['elemento', { clicado: indexDaImagem === 4 }]" @click="selecionarPeixe(4)">
-          <img class="ImagemPeixe" src="../../assets/imagens/modelo_peixe_4.webp" alt="" />
+          <img class="ImagemPeixe" :src="imagensArr[4]" alt="" />
         </li>
       </ul>
     </section>

@@ -1,3 +1,4 @@
+import imagem_peixe_morto from '@/assets/imagens/imagem_peixe_morto.webp'
 export class Peixe {
   nome = ''
   imagem = ''
@@ -43,7 +44,7 @@ export class Peixe {
       // Após 10 segundos (10 iterações), parar o intervalo e executar o evento final
       if (this.contador > this.tempoParaAlimentar) {
         clearInterval(this.intervaloId)
-        this.imagem = 'src/assets/imagens/modelo_peixe_morto.webp'
+        this.imagem = imagem_peixe_morto
         this.statusFome = 'hidden'
         setTimeout(() => {
           this.removerPeixeMorto(this.id)
