@@ -94,6 +94,6 @@ li {
 }
 
 img {
-  width: 9.3em;
+  width: 7.3em;
 }
 </style>
